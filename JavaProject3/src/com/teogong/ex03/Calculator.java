@@ -1,4 +1,4 @@
-package com.teogong.ex3;
+package com.teogong.ex03;
 
 public class Calculator {
 	public double areaCircle(double radius) {
