@@ -1,6 +1,6 @@
 package com.teogong.ex07;
 //   선생님 코드
-// 내가 부족한 부분 length활용, 메서드 활용  영역 부족
+// 내가 부족한 부분 length활용, 메서드 활용, printf 서식지정자  영역 부족
 public class Lab9 {
 	public static void main(String[] args) {
 		double[][]findAvgInput={{5,4.5,6.8},{6,0,3.4},{7,8.4,2.3}};
