@@ -1,6 +1,6 @@
-package com.teogong.ex06;
+package com.teogong.ex08;
 
-public class HybridEngine extends Engine{
+public class HybridEngine implements Engine{
 
 	@Override
 	public void runEngine() {

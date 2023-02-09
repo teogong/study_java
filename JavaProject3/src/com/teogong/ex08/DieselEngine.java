@@ -1,6 +1,8 @@
-package com.teogong.ex06;
+package com.teogong.ex08;
 
-public class DieselEngine extends Engine{
+
+
+public class DieselEngine implements Engine{
 
 	@Override
 	public void runEngine() {
