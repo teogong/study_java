@@ -8,7 +8,7 @@ public class ConstantTest5 {
 //		}
 //		상수는 enum으로 쓰자
 		Day day = Day.MONDAY;
-// 객체 레퍼런스는 스위치를 사용할수 없다.
+// 		객체 레퍼런스는 스위치를 사용할수 없다.
 		switch (day) {
 		case MONDAY:
 			System.out.println("It's Monday.");
