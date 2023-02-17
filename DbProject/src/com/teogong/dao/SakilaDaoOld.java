@@ -11,9 +11,9 @@ import java.util.List;
 import com.teogong.model.Film;
 import com.teogong.model.TitleActor;
 
-public enum SakilaDao {
-	INSTANCE;
-	
+
+
+public class SakilaDaoOld {
 	private String url = "jdbc:mysql://localhost:3306/sakila";
 	private String usernmae = "teogong";
 	private String password = "1234";
@@ -45,7 +45,6 @@ public enum SakilaDao {
 			// TODO: handle exception
 		}
 	}
-	
 	public List<Film> getFilms(String genre){
 		List<Film> films = new ArrayList<>();
 		
