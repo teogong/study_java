@@ -20,6 +20,7 @@ public class SakilaService {
 			System.out.println("===============================");
 			System.out.println("a. Films by genre");
 			System.out.println("b. Titles by actor");
+			System.out.println("c. Story by Title");
 			System.out.println("q. exit");
 			System.out.println("> ");
 			

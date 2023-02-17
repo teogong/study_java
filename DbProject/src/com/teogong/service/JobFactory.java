@@ -10,7 +10,9 @@ public class JobFactory {
 			work = new FilmsByGenre(scanner);
 		}else if(job.equals("b")) {
 			work = new TitlesByActor(scanner);
-		} else if(job.equals("q")) {
+		}else if(job.equals("c")) {
+			work = new StoryByTitle(scanner);
+		}else if(job.equals("q")) {
 			System.out.println();
 			System.out.println("Program Terminated!!");
 			scanner.close();

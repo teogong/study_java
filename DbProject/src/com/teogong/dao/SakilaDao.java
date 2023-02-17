@@ -9,6 +9,7 @@ import java.util.ArrayList;
 import java.util.List;
 
 import com.teogong.model.Film;
+import com.teogong.model.Store;
 import com.teogong.model.TitleActor;
 
 public enum SakilaDao {
@@ -124,5 +125,39 @@ public enum SakilaDao {
 		}
 		
 		return titles;
+	}
+	
+	public List<Store> getStoryByTitle(String title){
+		List<Store> stores = new ArrayList<>();
+		
+		getConnection();
+		
+		try {
+			cStmt = conn.prepareCall("call SP_GET_STORE(?)");
+			cStmt.setString(1, title);
+			rSet = cStmt.executeQuery();
+			
+			Store store;
+			while(rSet.next()) {
+				store = new Store();
+				store.setTitle(rSet.getString(1));
+				store.setStock(rSet.getInt(2));
+				store.setFirstName(rSet.getString(3));
+				store.setLastName(rSet.getString(4));
+				store.setAddress(rSet.getString(5));
+				store.setDistrict(rSet.getString(6));
+				store.setCity(rSet.getString(7));
+				store.setCountry(rSet.getString(8));
+				store.setStock(rSet.getInt(9));
+				stores.add(store);
+			}
+		} catch (Exception e) {
+			// TODO: handle exception
+			e.printStackTrace();
+		}finally {
+			closeConnection();
+		}
+		return stores;
+		
 	}
 }
